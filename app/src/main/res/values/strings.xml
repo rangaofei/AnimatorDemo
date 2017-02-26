@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AnimatorDemo</string>
+    <string-array name="animator_names">
+        <item>x轴移动</item>
+        <item>y轴移动</item>
+        <item>xy同时移动</item>
+        <item>矩形运动</item>
+        <item>矩形运动伴随透明度变化</item>
+    </string-array>
+
+    <string-array name="interpolator_names">
+        <item>1.AccelerateDecelerateInterpolator</item>
+        <item>2.AccelerateInterpolator</item>
+        <item>3.AnticipateInterpolator</item>
+        <item>4.AnticipateOvershootInterpolator</item>
+        <item>5.BounceInterpolator</item>
+        <item>6.CycleInterpolator</item>
+        <item>7.DecelerateInterpolator</item>
+        <item>8.LinearInterpolator</item>
+        <item>9.OvershootInterpolator</item>
+        <item>10.TimeInterpolator</item>
+    </string-array>
+</resources>
