@@ -5,11 +5,13 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.graphics.Path;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.util.Property;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -106,6 +108,26 @@ public class ValueAnimatorFragment extends Fragment implements View.OnClickListe
         alphaSet.play(animatorX1).before(animatorY1);
         alphaSet.play(animatorX1).with(animatorAlpha2);
         alphaSet.play(animatorY1).with(animatorAlpha3);
+        ImageViewWrapper i = new ImageViewWrapper(imageView);
+        Property p = Property.of(ImageViewWrapper.class, Float.class, "width");
+        ObjectAnimator animator = ObjectAnimator.ofFloat(i, p, 0, 100);
+        animator.setDuration(1000);
+        animators.add(animator);
+        ObjectAnimator animator1 = ObjectAnimator.ofFloat(i, "height", 0, 100);
+        animator1.setDuration(1000);
+        animators.add(animator1);
+
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(imageView, "scaleX", 0, 1);
+        animator2.setDuration(1000);
+        animators.add(animator2);
+        ObjectAnimator animator3 = ObjectAnimator.ofFloat(imageView, "scaleY", 0, 1);
+        animator2.setDuration(1000);
+        animators.add(animator3);
+        Path path=new Path();
+        path.addCircle(200,200,100, Path.Direction.CW);
+        ObjectAnimator animator4=ObjectAnimator.ofFloat(imageView,"X","Y",path);
+        animator.setDuration(5000);
+        animators.add(animator4);
         return view;
     }
 
@@ -178,8 +200,19 @@ public class ValueAnimatorFragment extends Fragment implements View.OnClickListe
                     recAnimSet.start();
                 } else if (spinner.getSelectedItemPosition() == 4) {
                     alphaSet.start();
+                } else if (spinner.getSelectedItemPosition() == 5) {
+                    animators.get(2).start();
+                } else if (spinner.getSelectedItemPosition() == 6) {
+                    animators.get(3).start();
+                } else if (spinner.getSelectedItemPosition() == 7) {
+                    animators.get(4).start();
+                } else if (spinner.getSelectedItemPosition() == 8) {
+                    animators.get(5).start();
+                }else if (spinner.getSelectedItemPosition() == 9) {
+                    animators.get(6).start();
                 }
                 break;
         }
     }
+
 }

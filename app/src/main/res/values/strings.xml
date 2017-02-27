@@ -6,6 +6,11 @@
         <item>xy同时移动</item>
         <item>矩形运动</item>
         <item>矩形运动伴随透明度变化</item>
+        <item>自定义x轴缩放</item>
+        <item>自定义y轴缩放</item>
+        <item>x轴缩放</item>
+        <item>y轴缩放</item>
+        <item>路径运动</item>
     </string-array>
 
     <string-array name="interpolator_names">

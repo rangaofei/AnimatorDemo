@@ -47,12 +47,14 @@
         android:id="@+id/ll_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="20dp"
         >
 
         <ImageView
             android:id="@+id/image_anim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:src="@mipmap/ic_launcher" />
     </LinearLayout>
 </LinearLayout>
