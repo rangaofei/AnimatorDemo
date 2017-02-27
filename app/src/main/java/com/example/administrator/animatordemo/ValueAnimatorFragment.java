@@ -126,7 +126,7 @@ public class ValueAnimatorFragment extends Fragment implements View.OnClickListe
         Path path=new Path();
         path.addCircle(200,200,100, Path.Direction.CW);
         ObjectAnimator animator4=ObjectAnimator.ofFloat(imageView,"X","Y",path);
-        animator.setDuration(5000);
+        animator4.setDuration(3000);
         animators.add(animator4);
         return view;
     }
