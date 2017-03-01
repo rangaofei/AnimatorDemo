@@ -75,7 +75,7 @@ public class ValueAnimatorFragment extends Fragment implements View.OnClickListe
         x = getActivity().getWindowManager().getDefaultDisplay().getWidth() - 200;
         y = getActivity().getWindowManager().getDefaultDisplay().getHeight() - 800;
         Log.d("X+Y", x + "------" + y);
-        ObjectAnimator animatorX = ObjectAnimator.ofFloat(imageView, "x", 0, x);
+        ObjectAnimator animatorX = ObjectAnimator.ofFloat(imageView, "rotation", 0, 360);
         animatorX.setDuration(1000);
         ObjectAnimator animatorY = ObjectAnimator.ofFloat(imageView, "y", 0, y);
         animatorY.setDuration(1000);
